@@ -20,7 +20,7 @@
 // 		$resultado_usuario = mysqli_query($conexao, $result_usuario);
 // 	}
 
-
+	
 
 
 	
