@@ -2,7 +2,7 @@
 	include_once("conexao.php");
 	if(isset($_POST['enviar'])){
 	$nome = $_POST['nome'];
-	$vagas = $_POST['vagas'];
+	
 	$data = $_POST['data'];
 	$horainicial = $_POST['horainicial'];
 	//echo "$nome_usuario - $email_usuario";
@@ -24,13 +24,17 @@
 
 
 	
-	$result_usuario = "INSERT INTO cria_comp_lanc(nome,vagas, data, horainicial) VALUES ('$nome','$vagas','$data','$horainicial')";
+	$result_usuario = "INSERT INTO cria_comp_lanc(nome,data, horainicial) VALUES ('$nome','$data','$horainicial')";
 	$resultado_usuario = mysqli_query($conexao, $result_usuario);
 	
 	if(mysqli_affected_rows($conexao) != 0){
-				$_SESSION['mensagem']=  "<div class='alert alert-success'>Cadastrado com sucesso!</div>";	
+				$_SESSION['mensagem']=  "<div class='alert alert-success'>Cadastrado com sucesso!</div>";
+				header("location: ../Cadastro_competidor/Cadastro_competidor.php");
+				exit;	
 			}else{
 				$_SESSION['mensagem']=  "<div class='alert alert-success'>Erro no cadastro</div>";	
+				header("location: ../add_lancamento.php");
+				exit;
 			}
 
 }

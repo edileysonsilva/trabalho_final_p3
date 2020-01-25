@@ -49,10 +49,10 @@
                               
                           
                             
-                                <div class="form-group">
+                               <!--  <div class="form-group">
                                     <label>Quantidade de Inscritos</label>
                                     <input type="number" name="vagas" class="form-control" placeholder="Informe o numero de vagas" required="required">
-                                </div>
+                                </div> -->
 
 
                                 <div class="row">
